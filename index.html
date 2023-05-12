@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- link css  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container-lg">
+      <h1>Tính điểm tinh tốt nghiệp</h1>
+      <div class="input-group mb-3">
+        <input
+          id="diemChuan"
+          type="text"
+          class="form-control"
+          placeholder="Điểm chuẩn"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <input
+          id="diemToan"
+          type="text"
+          class="form-control"
+          placeholder="Điểm Toán"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <input
+          id="diemLy"
+          type="text"
+          class="form-control"
+          placeholder="Điểm Lý"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <input
+          id="diemHoa"
+          type="text"
+          class="form-control"
+          placeholder="Điểm Hóa"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <input
+          id="khuVuc"
+          type="text"
+          class="form-control"
+          placeholder="Khu Vực"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <input
+          id="uuTien"
+          type="text"
+          class="form-control"
+          placeholder="Đối tượng ưu tiên"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <button
+          onclick="bai1()"
+          class="btn btn-outline-secondary btn-success text-white"
+          type="button"
+          id=""
+        >
+          Tính Điểm Tốt Nghiệp
+        </button>
+      </div>
+      <div id="ketQuaThi" class="bg-opacity-75 bg-success p-3 text-white"></div>
+    </div>
+    <div class="container-lg">
+      <h1>Tính tiền điện hằng tháng</h1>
+      <div class="input-group mb-3">
+        <input
+          id="tenNguoiDung"
+          type="text"
+          class="form-control"
+          placeholder="Tên người dùng"
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <input
+          id="soDien"
+          type="text"
+          class="form-control"
+          placeholder="Điền Số KW "
+          aria-label="Button"
+          aria-describedby=""
+        />
+        <button
+          onclick="bai2()"
+          class="btn btn-outline-secondary"
+          type="button"
+          id=""
+        >
+          Tình tiền điện
+        </button>
+      </div>
+      <div id="ketQua2" class="bg-opacity-75 bg-success text-white p-3"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
