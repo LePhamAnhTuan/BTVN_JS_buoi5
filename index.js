@@ -68,3 +68,65 @@ function bai2() {
     "ketQua2"
   ).innerHTML = `Khách hàng ${tenNguoiDung} tháng này dùng ${soDien}VND `;
 }
+
+function bai3() {
+  var hoTen = document.getElementById("hoten").value;
+  var tongThuNhapNam = document.getElementById("tongthunhapnam").value * 1;
+  var soNguoiPhuThuoc = document.getElementById("songuoiphuthuoc").value * 1;
+  var thuNhapChiuThue = 0;
+  thuNhapChiuThue = tongThuNhapNam - 4 - soNguoiPhuThuoc * 1.6;
+
+  if (thuNhapChiuThue < 60) {
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (5 / 100);
+  } else if (thuNhapChiuThue > 60 && thuNhapChiuThue < 120) {
+    console.log("thuNhapChiuThue: ", thuNhapChiuThue);
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (10 / 100);
+  } else if (thuNhapChiuThue > 120 && thuNhapChiuThue < 210) {
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (15 / 100);
+  } else if (thuNhapChiuThue > 210 && thuNhapChiuThue < 384) {
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (20 / 100);
+  } else if (thuNhapChiuThue > 384 && thuNhapChiuThue < 624) {
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (25 / 100);
+  } else if (thuNhapChiuThue > 624 && thuNhapChiuThue < 960) {
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (30 / 100);
+  } else if (thuNhapChiuThue > 960) {
+    thuNhapChiuThue = thuNhapChiuThue + thuNhapChiuThue * (35 / 100);
+  }
+  console.log("thuNhapChiuThue: ", thuNhapChiuThue);
+  document.getElementById("ketQua3").innerHTML =
+    `So thue thu nhap ca nhan cua ${hoTen} la ` + thuNhapChiuThue.toFixed(1);
+}
+
+function bai4() {
+  var maKhachHang = document.getElementById("maKhachHang").value;
+  var soKenhCaoCap = document.getElementById("soKenhKetNoi").value * 1;
+  var nhaDan = document.getElementById("nhaDan").checked;
+  var doanhNghiep = document.getElementById("doanhNghiep").value;
+  var soKenhDoanhNghiep =
+    document.getElementById("inputGroupSelect01").value * 1;
+
+  console.log("maKhachHang: ", maKhachHang);
+  console.log("soKenhCaoCap: ", soKenhCaoCap);
+  console.log("nhaDan: ", nhaDan);
+  console.log("doanhNghiep: ", doanhNghiep);
+  console.log("soKenhDoanhNghiep: ", soKenhDoanhNghiep);
+  var tongTinhCap = 0;
+  if (nhaDan == true) {
+    tongTinhCap = soKenhCaoCap * 7.5 + 4.5 + 20.5;
+    console.log("tongTinhCap: ", tongTinhCap);
+  } else if (
+    nhaDan == false &&
+    doanhNghiep == "doanhNghiep" &&
+    soKenhCaoCap < 10
+  ) {
+    tongTinhCap = 15 + soKenhCaoCap * 5 + soKenhDoanhNghiep * 50;
+    console.log("tongTinhCap: ", tongTinhCap);
+  } else if (
+    nhaDan == false &&
+    doanhNghiep == "doanhNghiep" &&
+    soKenhCaoCap >= 10
+  ) {
+    tongTinhCap = 15 + 75 + (soKenhCaoCap - 10) * 5 + soKenhDoanhNghiep * 50;
+  }
+  console.log("tongTinhCap: ", tongTinhCap);
+}
